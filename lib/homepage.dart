@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller = TextEditingController();
   final List<Message> _message = [
     Message(text: "hi", isUser: true),
-    Message(text: "hey, sup ?", isUser: false),
+    Message(text: "hey, wassup ?", isUser: false),
     Message(text: "great, sup wit u?", isUser: true),
     Message(text: "im, good", isUser: false),
   ];
