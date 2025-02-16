@@ -13,7 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Message> _message = [
     Message(text: "hi", isUser: true),
     Message(text: "hey, wassup ?", isUser: false),
-    Message(text: "great, sup wit u?", isUser: true),
+    Message(text: "great, sup wit you?", isUser: true),
     Message(text: "im, good", isUser: false),
   ];
   @override
@@ -60,24 +60,36 @@ class _MyHomePageState extends State<MyHomePage> {
 
           //user input
           Padding(
-            padding: const EdgeInsets.all(17),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    decoration: InputDecoration(
-                      hintText: 'write your message',
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 20)
+            padding:
+                const EdgeInsets.only(bottom: 32, top: 16, left: 16, right: 16),
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(32),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 7,
+                        offset: Offset(0, 3))
+                  ]),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _controller,
+                      decoration: InputDecoration(
+                          hintText: 'write your message',
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 20)),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                IconButton(onPressed: () {}, icon: Icon(Icons.send))
-              ],
+                  SizedBox(
+                    width: 8,
+                  ),
+                  IconButton(onPressed: () {}, icon: Icon(Icons.send))
+                ],
+              ),
             ),
           ),
         ],
