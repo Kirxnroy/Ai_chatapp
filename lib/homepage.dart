@@ -19,6 +19,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: Colors.deepPurple,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  height: 40,
+                  width: 40,
+                    child: Image.asset(
+                  'assets/aibotp.png',
+                )),
+                Text(
+                  'AI BOT',
+                  style: TextStyle(color: Colors.white),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
